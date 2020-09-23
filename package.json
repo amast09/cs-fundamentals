@@ -1,0 +1,24 @@
+{
+  "name": "cs-fundamentals",
+  "version": "1.0.0",
+  "description": "A code repo I can TDD through fundamental CS data structures and algorithms",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc --incremental",
+    "test": "jest"
+  },
+  "author": "Aaron Mast",
+  "license": "MIT",
+  "engines": {
+    "node": "14.12.0"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.2"
+  }
+}
