@@ -8,7 +8,7 @@
 - [ ] Breadth First Search
 
 ## Data Structures
-- [ ] Linked List
+- [x] Linked List
 - [ ] Queue
 - [ ] Stack
 - [ ] Binary Tree
