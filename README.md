@@ -18,6 +18,16 @@
 - [ ] Hash Table
 - [ ] Try
 
-## Questions
- - [ ] Fill in as Completed
+## Problems Categories (Fill in as Completed)
+ - [ ] Arrays
+ - [ ] Strings
+ - [ ] Lists
+ - [ ] Stacks
+ - [ ] Queues
+ - [ ] Hashes / Maps
+ - [ ] Sorting
+ - [ ] Trees
+ - [ ] Graphs
+ - [ ] Recursion
+ 
 
