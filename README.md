@@ -1,7 +1,7 @@
 # Items to complete
 
 ## Algorithms
-- [ ] Merge Sort
+- [x] Merge Sort
 - [ ] Quicksort
 - [ ] Binary Search
 - [ ] Depth First Search
