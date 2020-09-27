@@ -27,8 +27,8 @@ function mergeArrays(array1: number[], array2: number[]): number[] {
   return mergedSortedArray;
 }
 
-// O(n log n) time
-// O(n) space
+// Time Complexity: O(n log n)
+// Space Complexity: O(n)
 function mergeSort(list: number[]): number[] {
   if (list.length < 2) {
     return list;

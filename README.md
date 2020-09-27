@@ -2,7 +2,7 @@
 
 ## Algorithms
 - [x] Merge Sort
-- [ ] Quicksort
+- [x] Quicksort
 - [ ] Binary Search
 - [ ] Depth First Search
 - [ ] Breadth First Search
@@ -18,7 +18,7 @@
 - [ ] Hash Table
 - [ ] Try
 
-## Problems Categories (Fill in as Completed)
+## Problems Categories
  - [ ] Arrays
  - [ ] Strings
  - [ ] Lists

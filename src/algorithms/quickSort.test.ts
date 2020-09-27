@@ -1,6 +1,6 @@
-import mergeSort from "./mergeSort";
+import quickSort from "./quickSort";
 
-describe("mergeSort", () => {
+describe("quickSort", () => {
   it.each`
     unsortedList                    | sortedList
     ${[]}                           | ${[]}
@@ -13,7 +13,7 @@ describe("mergeSort", () => {
   `(
     "sorts the list `$unsortedList` to `$sortedList`",
     ({ unsortedList, sortedList }) => {
-      expect(mergeSort(unsortedList)).toEqual(sortedList);
+      expect(quickSort(unsortedList)).toEqual(sortedList);
     }
   );
 });
