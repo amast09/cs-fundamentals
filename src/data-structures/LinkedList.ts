@@ -46,6 +46,17 @@ class LinkedList<T> {
     return this.getListElementTail()?.element;
   }
 
+  get(index: number): T | undefined {
+    let nextElement = this.rootElement;
+
+    while (index > 0 && nextElement?.maybeNextLinkElement !== undefined) {
+      nextElement = nextElement?.maybeNextLinkElement;
+      index = index - 1;
+    }
+
+    return index !== 0 ? undefined : nextElement?.element;
+  }
+
   private getListElementTail(): ListElement<T> | undefined {
     let nextElement = this.rootElement;
 

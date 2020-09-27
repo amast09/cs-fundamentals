@@ -52,4 +52,37 @@ describe("LinkedList", () => {
       expect(linkedList.tail()).toBe(element2);
     });
   });
+
+  describe("get", () => {
+    test("returns undefined when there are no elements in the linked list", () => {
+      const linkedList = new LinkedList<number>();
+
+      expect(linkedList.get(1)).toBe(undefined);
+    });
+
+    test("returns undefined when the index is less than 0", () => {
+      const linkedList = new LinkedList<number>();
+
+      expect(linkedList.get(-1)).toBe(undefined);
+    });
+
+    test("returns undefined when the index is greater than the list size", () => {
+      const linkedList = new LinkedList<number>();
+      linkedList.push(1);
+      linkedList.push(2);
+      linkedList.push(3);
+
+      expect(linkedList.get(500)).toBe(undefined);
+    });
+
+    test("returns the element at the specific index when it exists at the index", () => {
+      const expectedElement = 2;
+      const linkedList = new LinkedList<number>();
+      linkedList.push(1);
+      linkedList.push(expectedElement);
+      linkedList.push(3);
+
+      expect(linkedList.get(1)).toBe(expectedElement);
+    });
+  });
 });
