@@ -9,7 +9,7 @@
 
 ## Data Structures
 - [x] Linked List
-- [ ] Queue
+- [x] Queue
 - [ ] Stack
 - [ ] Binary Tree
 - [ ] Tree
