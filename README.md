@@ -3,9 +3,9 @@
 ## Algorithms
 - [x] Merge Sort
 - [x] Quicksort
-- [ ] Binary Search
-- [ ] Depth First Search
-- [ ] Breadth First Search
+- [x] Binary Search
+- [x] Depth First Search
+- [x] Breadth First Search
 
 ## Data Structures
 - [x] Linked List
