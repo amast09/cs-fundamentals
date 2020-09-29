@@ -9,6 +9,11 @@ interface NodeWithLevel {
   readonly level: number;
 }
 
+interface NodeWithParent {
+  readonly node: Node;
+  readonly maybeParentNode?: Node;
+}
+
 enum SearchStrategy {
   DepthFirstSearch = "DepthFirstSearch",
   BreadthFirstSearch = "BreadthFirstSearch",
@@ -30,7 +35,68 @@ class BinarySearchTree {
   }
 
   remove(value: number): void {
-    console.log(value);
+    if (this.rootNode !== undefined) {
+      const nodesToVisit: NodeWithParent[] = [{ node: this.rootNode }];
+      const visitedNodes: Set<number> = new Set<number>();
+
+      let nodeBeingVisited = nodesToVisit.shift();
+      while (
+        nodeBeingVisited !== undefined &&
+        nodeBeingVisited.node.value !== value
+      ) {
+        if (!visitedNodes.has(nodeBeingVisited.node.value)) {
+          visitedNodes.add(nodeBeingVisited.node.value);
+
+          if (
+            nodeBeingVisited.node.value > value &&
+            nodeBeingVisited.node.maybeLeftNode
+          ) {
+            nodesToVisit.push({
+              node: nodeBeingVisited.node.maybeLeftNode,
+              maybeParentNode: nodeBeingVisited.node,
+            });
+          } else if (nodeBeingVisited.node.maybeRightNode) {
+            nodesToVisit.push({
+              node: nodeBeingVisited.node.maybeRightNode,
+              maybeParentNode: nodeBeingVisited.node,
+            });
+          }
+        }
+
+        nodeBeingVisited = nodesToVisit.shift();
+      }
+
+      if (nodeBeingVisited !== undefined) {
+        const { node, maybeParentNode } = nodeBeingVisited;
+        if (maybeParentNode === undefined) {
+          this.rootNode = undefined;
+        } else {
+          if (maybeParentNode.maybeLeftNode === node) {
+            if (node.maybeLeftNode && node.maybeRightNode) {
+              maybeParentNode.maybeLeftNode = node.maybeLeftNode;
+              node.maybeLeftNode.maybeRightNode = node.maybeRightNode;
+            } else if (node.maybeLeftNode) {
+              maybeParentNode.maybeLeftNode = node.maybeLeftNode;
+            } else if (node.maybeRightNode) {
+              maybeParentNode.maybeLeftNode = node.maybeRightNode;
+            } else {
+              maybeParentNode.maybeLeftNode = undefined;
+            }
+          } else if (maybeParentNode.maybeRightNode === node) {
+            if (node.maybeLeftNode && node.maybeRightNode) {
+              maybeParentNode.maybeRightNode = node.maybeLeftNode;
+              node.maybeLeftNode.maybeRightNode = node.maybeRightNode;
+            } else if (node.maybeLeftNode) {
+              maybeParentNode.maybeRightNode = node.maybeLeftNode;
+            } else if (node.maybeRightNode) {
+              maybeParentNode.maybeRightNode = node.maybeRightNode;
+            } else {
+              maybeParentNode.maybeRightNode = undefined;
+            }
+          }
+        }
+      }
+    }
   }
 
   depthFirstSearchForValue(

@@ -11,7 +11,7 @@
 - [x] Linked List
 - [x] Queue
 - [x] Stack
-- [ ] Binary Tree
+- [x] Binary Search Tree
 - [ ] Tree
 - [ ] Graph
 - [ ] Heap
