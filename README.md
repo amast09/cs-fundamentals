@@ -12,7 +12,6 @@
 - [x] Queue
 - [x] Stack
 - [x] Binary Search Tree
-- [ ] Tree
 - [ ] Graph
 - [ ] Heap
 - [ ] Hash Table
