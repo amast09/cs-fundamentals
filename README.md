@@ -18,12 +18,15 @@
 - [ ] Try
 
 ## Problems Categories
- - [ ] Arrays
+ - Arrays
+    * Max population
  - [ ] Strings
- - [ ] Lists
+ - Lists
+    * Max population
  - [ ] Stacks
  - [ ] Queues
- - [ ] Hashes / Maps
+ - Hashes / Maps
+    * Max population
  - [ ] Sorting
  - [ ] Trees
  - [ ] Graphs
