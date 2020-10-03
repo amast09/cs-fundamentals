@@ -21,6 +21,7 @@
  - Arrays
     * Max population
     * Word Highlight Area
+    * Rotate Left
  - Strings
     * Word Highlight Area
  - Lists
