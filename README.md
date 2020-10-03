@@ -20,7 +20,9 @@
 ## Problems Categories
  - Arrays
     * Max population
- - [ ] Strings
+    * Word Highlight Area
+ - Strings
+    * Word Highlight Area
  - Lists
     * Max population
  - [ ] Stacks

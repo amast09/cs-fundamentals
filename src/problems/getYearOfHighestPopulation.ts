@@ -110,18 +110,19 @@ littleLessNaiveApproach([]);
     - keep hash of year => person living
     - iterate through person list and increment the hash for every year they were alive
     - return the entry with the highest number from hash
-   O(n) = O(numPeople  + uniqueBirthdays)
+   O(n) = O(numPeople  + uniqueBirthdays (which is <= numPeople)) => O(n)
 */
-const howManyApproachesCouldThereBe = (
-  persons: Person[]
-): number | undefined => {
-  const birthYearDeltas = persons.reduce<StringMap>((acc, person) => {
-    const currentBirthYearDelta = acc[person.birthYear] ?? 0;
-    acc[person.birthYear] = currentBirthYearDelta + 1;
-    const currentDeathYearDelta = acc[person.deathYear] ?? 0;
-    acc[person.deathYear] = currentDeathYearDelta - 1;
-    return acc;
-  }, {} as StringMap);
+const getYearOfHighestPopulation = (persons: Person[]): number | undefined => {
+  const birthYearDeltas = persons.reduce<StringMap>(
+    (birthYearDeltasAcc, person) => {
+      const currentBirthYearDelta = birthYearDeltasAcc[person.birthYear] ?? 0;
+      birthYearDeltasAcc[person.birthYear] = currentBirthYearDelta + 1;
+      const currentDeathYearDelta = birthYearDeltasAcc[person.deathYear] ?? 0;
+      birthYearDeltasAcc[person.deathYear] = currentDeathYearDelta - 1;
+      return birthYearDeltasAcc;
+    },
+    {} as StringMap
+  );
 
   const deltaWithHighest = Object.entries(birthYearDeltas).reduce<
     DeltaWithHighest | undefined
@@ -167,4 +168,4 @@ const howManyApproachesCouldThereBe = (
     : undefined;
 };
 
-export default howManyApproachesCouldThereBe;
+export default getYearOfHighestPopulation;
