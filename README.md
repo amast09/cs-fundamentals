@@ -18,12 +18,14 @@
 - [ ] Try
 
 ## Problems Categories
- - Arrays
-    * Max population
+ - Arrays & Strings
+    * Max Population
     * Word Highlight Area
     * Rotate Left
- - Strings
-    * Word Highlight Area
+    * All Unique Characters
+    * One Edit Away
+    * is Permutation
+    * is Palindrome Permutation 
  - Lists
     * Max population
  - [ ] Stacks
@@ -34,5 +36,7 @@
  - [ ] Trees
  - [ ] Graphs
  - [ ] Recursion
+ - Other
+    * Final Running Instances 
  
 
