@@ -34,7 +34,8 @@
     * Max population
  - [ ] Sorting
  - [ ] Trees
- - [ ] Graphs
+ - Graphs
+    * Graph has route
  - [ ] Recursion
  - Other
     * Final Running Instances 
