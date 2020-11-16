@@ -5,8 +5,10 @@ describe("getTrailingZerosForFactorial", () => {
     factorial | expectedTrailing0s
     ${1}      | ${0}
     ${3}      | ${0}
+    ${4}      | ${0}
     ${5}      | ${1}
     ${6}      | ${1}
+    ${7}      | ${1}
     ${10}     | ${2}
     ${13}     | ${2}
     ${15}     | ${3}
