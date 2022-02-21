@@ -3,9 +3,11 @@
 ## Algorithms
 - [x] Merge Sort
 - [x] Quicksort
+- [x] Counting Sort
 - [x] Binary Search
 - [x] Depth First Search
 - [x] Breadth First Search
+- [ ] Least Common Sequence
 
 ## Data Structures
 - [x] Linked List
