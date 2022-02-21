@@ -7,7 +7,7 @@
 - [x] Binary Search
 - [x] Depth First Search
 - [x] Breadth First Search
-- [ ] Least Common Sequence
+- [x] Least Common Sequence
 
 ## Data Structures
 - [x] Linked List
