@@ -43,11 +43,11 @@ const isPointWithinLine = (line: Line, candidatePoint: Point): boolean => {
 
 const isPointOnLine = (line: Line, candidatePoint: Point): boolean => {
   const [startPoint, endPoint] = line;
-  const isPointWithinLine = isPointWithinLine(line, candidatePoint);
+  const pointIsInLine = isPointWithinLine(line, candidatePoint);
 
-  if (isLineHorizontal(line) && isPointWithinLine) {
+  if (isLineHorizontal(line) && pointIsInLine) {
     return candidatePoint.x === endPoint.x;
-  } else if (isLineVertical(line) && isPointWithinLine) {
+  } else if (isLineVertical(line) && pointIsInLine) {
     return candidatePoint.y === endPoint.y;
   } else {
     const slopeOfLine = getSlopeForLine(line);
@@ -56,7 +56,7 @@ const isPointOnLine = (line: Line, candidatePoint: Point): boolean => {
       candidatePoint,
     ]);
 
-    return slopeOfLine === slopeForCandidatePoint && isPointWithinLine;
+    return slopeOfLine === slopeForCandidatePoint && pointIsInLine;
   }
 };
 
